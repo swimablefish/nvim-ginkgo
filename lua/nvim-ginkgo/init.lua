@@ -27,7 +27,7 @@ end
 ---@param file_path string
 ---@return boolean
 function adapter.is_test_file(file_path)
-	if not vim.endswith(file_path, ".go") or vim.endswith(file_path, "suite_test.go") then
+	if not vim.endswith(file_path, ".go") then
 		return false
 	end
 
