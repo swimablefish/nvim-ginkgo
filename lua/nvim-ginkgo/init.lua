@@ -217,5 +217,12 @@ function adapter.results(spec, result, tree)
 	return collection
 end
 
+setmetatable(adapter, {
+	__call = function(_, opts)
+		logger.debug("ginko adapter setmetatable is called")
+		return adapter
+	end,
+})
+
 --the adatper
 return adapter
